@@ -6,17 +6,17 @@ const AboutUsSection = () => {
     <div>
       <div className="description">
         <div className="hide">
-          <p>We work to make</p>
+          <h2>We work to make</h2>
         </div>
         <div className="hide">
-          <p>your <span>dreams</span> come</p>
+          <h2>your <span>dreams</span> come</h2>
         </div>
         <div className="hide">
           <p>true.</p>
         </div>
-        <p>
+        <h2>
           Contact us for any Photography or Videography ideas that you have. We have professionals with amazing skills to help you achieve it.
-        </p>
+        </h2>
         <button>
           Contact Us
         </button>
