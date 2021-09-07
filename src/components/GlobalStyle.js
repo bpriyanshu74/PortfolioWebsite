@@ -9,8 +9,10 @@ const GlobalStyle  = createGlobalStyle`
 
   body{
     background-color: #1b1b1b;
+    font-family:'Lato', sans-serif;
   }
   button{
+    font-family:'Lato', sans-serif;
     font-weight: bold;
     font-size:1.1.rem;
     padding:1rem 2rem;
@@ -33,6 +35,7 @@ const GlobalStyle  = createGlobalStyle`
     }
     h4{
       font-weight: bold;
+      font-size:1.3rem;
     }
     span{
       font-weight: bold;
