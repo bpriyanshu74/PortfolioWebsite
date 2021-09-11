@@ -6,11 +6,14 @@ import teamwork from '../img/teamwork.svg';
 import home2 from '../img/home2.png';
 import { About, Description, Image } from "../style";
 import styled from "styled-components";
+import { useScroll } from "./useScroll";
+import {fade} from '../animation';
 
 
 const ServicesSection = () => {
+  const [element, controls] = useScroll();
   return (
-    <Services>
+    <Services ref={element} initial='hidden' animate={controls} variants={fade}>
       <Description>
         <h2>High <span>quality</span> service.</h2>
 
@@ -59,6 +62,7 @@ const ServicesSection = () => {
 };
 
 const Services = styled(About)`
+  
   h2{
     padding-bottom:5rem;
   }
@@ -66,14 +70,24 @@ const Services = styled(About)`
     width:70%;
     padding:1rem 0rem 2rem 0rem;
   }
+  @media (max-width:1020px){
+    margin:3rem 0rem;
+  }
+  
 `
 const Cards = styled.div`
 /* margin-top:5rem; */
   display:flex;
   flex-wrap:wrap;
+  @media (max-width:1020px){
+    justify-content:center;
+    margin:2rem 0rem;
+  }
+  
 `
 const Card = styled.div`
-  flex-basis:13rem;
+
+  flex-basis:15rem;
   .icon{
     display:flex;
     align-items:center;

@@ -2,11 +2,14 @@ import { React, useEffect, useState } from "react";
 import { MovieState } from '../components/movieState';
 import { useHistory } from "react-router";
 import styled from "styled-components";
-
+import { motion } from "framer-motion";
+import { pageAnimation } from "../animation";
 
 
 const MovieDetails = () => {
-  const history = useHistory()
+
+  
+  const history = useHistory();
   const url = history.location.pathname;
   const [movies, setMovies] = useState(MovieState);
   const [movie, setMovie] = useState(null);
@@ -14,14 +17,13 @@ const MovieDetails = () => {
   useEffect(() => {
     const currentMovie = movies.filter((stateMovie) => stateMovie.url === url);
     setMovie(currentMovie[0]);
-  }, [movies, url])
-  console.log(movie);
+  }, [movies, url]);
 
 
   return (
     <>
     {movie && (
-      <Details>
+      <Details variants={pageAnimation} initial='hidden' animate='show' exit='exit' style={{background:'#1b1b1b'}}>
         <Headline>
           <h2>{movie.title}</h2>
           <img src={movie.mainImg} alt="" />
@@ -42,7 +44,7 @@ const MovieDetails = () => {
   );
 }
 
-const Details = styled.div`
+const Details = styled(motion.div)`
   color:white;
 `
 const Headline = styled.div`
@@ -68,6 +70,10 @@ const Awards = styled.div`
   display: flex;
   align-items:center;
   justify-content: space-around;
+  @media (max-width:1020px){
+    padding:2rem;
+    display: block;
+  }
 `
 const StyledAward = styled.div`
   
@@ -99,7 +105,11 @@ const ImageDisplay = styled.div`
     height:100vh;
     width:100%;
     object-fit:cover;
+    @media (max-width:1020px){
+    height:50vh;
   }
+  }
+ 
 `;
 
 export default MovieDetails;

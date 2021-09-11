@@ -1,26 +1,32 @@
-import react from "react";
+import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import { useLocation } from "react-router-dom";
 
 const Nav = () => {
+  const {pathname} = useLocation();
   return (
     <StyledNav>
 
-      <h1><Link to='/'>Capture</Link></h1>
+      <h1><Link to='/' id='logo'>Capture</Link></h1>
       <ul>
         <li>
           <Link to='/'>
-            About Us
+            1. About Us
+            <Line transition={{duration:0.5}} initial={{width:'0%'}} animate={{width: pathname==='/' ? '50%': '0%'}}/>
           </Link>
         </li>
         <li>
           <Link to='/work'>
-            Our Work
+            2. Our Work
+            <Line transition={{duration:0.5}} initial={{width:'0%'}} animate={{width: pathname==='/work' ? '50%': '0%'}}/>
           </Link>
         </li>
         <li>
           <Link to='/contact'>
-            Contact Us
+            3. Contact Us
+            <Line transition={{duration:0.5}} initial={{width:'0%'}} animate={{width: pathname==='/contact' ? '50%': '0%'}}/>
           </Link>
         </li>
       </ul>
@@ -29,7 +35,7 @@ const Nav = () => {
 }
 
 const StyledNav = styled.nav`
-  height: 10vh;
+  min-height: 10vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -53,13 +59,45 @@ const StyledNav = styled.nav`
     padding-left:5rem;
     position: relative;
     }
+    ul li a {
+      font-size:0.9rem;
+    }
 
     #logo{
       font-weight: lighter;
-      font-family: "Lobster";
+      font-family: 'lobster';
       font-size: 1.3rem;
     }
+
+    @media (max-width:1020px){      
+      flex-direction: column;
+      padding:1rem 0rem;
+      #logo{
+        display: inline-block;
+           margin:1rem 0rem;    
+      }
+     ul{ 
+       justify-content: space-around;
+       width:100%;
+       padding:1rem 0rem;
+       li{
+         padding:0;
+       }
+      }
+    }
   
+`;
+
+const Line = styled(motion.div)`
+  bottom:-80%;
+  left:50%;
+  height:0.2rem;
+  background:#27d997;
+  width:100%;
+  position:absolute;
+  @media (max-width:1020px){
+    left:0%;
+  }
 `
 
 export default Nav;

@@ -1,29 +1,38 @@
 import React from "react";
 import home1 from '../img/home1.png';
-import styled from 'styled-components';
 import { About, Description, Hide, Image } from "../style";
+import { motion } from "framer-motion";
+import { titleAnim, imgAnim, fade } from "../animation";
+import { Link } from "react-router-dom";
+import Wave from "./wave";
 
 const AboutUsSection = () => {
-  return(
+
+  return (
     <About>
       <Description>
         <Hide>
-          <h2>We work to make</h2>
+          <motion.h2 variants={titleAnim}>We work to make</motion.h2>
         </Hide>
         <Hide>
-          <h2>your <span>dreams</span> come <br></br>true.</h2>
+          <motion.h2 variants={titleAnim}>your <span>dreams</span> come <br></br>true.</motion.h2>
         </Hide>
-        
-        <p>
+
+        <motion.p variants={fade}>
           Contact us for any Photography or Videography ideas that you have. We have professionals with amazing skills to help you achieve it.
-        </p>
-        <button>
-          Contact Us
-        </button>
+        </motion.p>
+        
+        <Link to='/contact'>
+          <motion.button variants={fade}>            
+            Contact Us            
+          </motion.button>
+        </Link>
+        
       </Description>
       <Image>
-        <img src={home1} alt="guy with a camera" />
+        <motion.img variants={imgAnim} src={home1} alt="guy with a camera" />
       </Image>
+      <Wave />
     </About>
   )
 }
