@@ -11,7 +11,7 @@ const MovieDetails = () => {
   
   const history = useHistory();
   const url = history.location.pathname;
-  const [movies, setMovies] = useState(MovieState);
+  const [movies, /*setMovies*/] = useState(MovieState);
   const [movie, setMovie] = useState(null);
 
   useEffect(() => {
