@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.js": "/PortfolioWebsite/static/js/main.9747e8e2.chunk.js",
+    "main.js.map": "/PortfolioWebsite/static/js/main.9747e8e2.chunk.js.map",
+    "runtime-main.js": "/PortfolioWebsite/static/js/runtime-main.d9554184.js",
+    "runtime-main.js.map": "/PortfolioWebsite/static/js/runtime-main.d9554184.js.map",
+    "static/js/2.4a86d5bd.chunk.js": "/PortfolioWebsite/static/js/2.4a86d5bd.chunk.js",
+    "static/js/2.4a86d5bd.chunk.js.map": "/PortfolioWebsite/static/js/2.4a86d5bd.chunk.js.map",
+    "static/js/3.1ae97ffc.chunk.js": "/PortfolioWebsite/static/js/3.1ae97ffc.chunk.js",
+    "static/js/3.1ae97ffc.chunk.js.map": "/PortfolioWebsite/static/js/3.1ae97ffc.chunk.js.map",
+    "index.html": "/PortfolioWebsite/index.html",
+    "static/js/2.4a86d5bd.chunk.js.LICENSE.txt": "/PortfolioWebsite/static/js/2.4a86d5bd.chunk.js.LICENSE.txt",
+    "static/media/athlete-small.9c7a85d4.png": "/PortfolioWebsite/static/media/athlete-small.9c7a85d4.png",
+    "static/media/athlete2.b216a5ad.png": "/PortfolioWebsite/static/media/athlete2.b216a5ad.png",
+    "static/media/clock.4b7cde7e.svg": "/PortfolioWebsite/static/media/clock.4b7cde7e.svg",
+    "static/media/diaphragm.db801491.svg": "/PortfolioWebsite/static/media/diaphragm.db801491.svg",
+    "static/media/good-times2.4ea1be17.jpg": "/PortfolioWebsite/static/media/good-times2.4ea1be17.jpg",
+    "static/media/goodtimes-small.94ab060d.png": "/PortfolioWebsite/static/media/goodtimes-small.94ab060d.png",
+    "static/media/home1.9836de69.png": "/PortfolioWebsite/static/media/home1.9836de69.png",
+    "static/media/home2.a65a4256.png": "/PortfolioWebsite/static/media/home2.a65a4256.png",
+    "static/media/money.72da7c48.svg": "/PortfolioWebsite/static/media/money.72da7c48.svg",
+    "static/media/teamwork.aa71db2e.svg": "/PortfolioWebsite/static/media/teamwork.aa71db2e.svg",
+    "static/media/the-racer2.580f15cd.jpg": "/PortfolioWebsite/static/media/the-racer2.580f15cd.jpg",
+    "static/media/theracer-small.51874213.png": "/PortfolioWebsite/static/media/theracer-small.51874213.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d9554184.js",
+    "static/js/2.4a86d5bd.chunk.js",
+    "static/js/main.9747e8e2.chunk.js"
+  ]
+}
